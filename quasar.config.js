@@ -10,7 +10,7 @@
 
 
 const { configure } = require('quasar/wrappers');
-const envparser = require('./envparser.js');
+const envparser = require('./envparser.ts');
 const path = require('path');
 
 module.exports = configure(function (/* ctx */) {
