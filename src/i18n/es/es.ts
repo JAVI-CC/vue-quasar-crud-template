@@ -1,4 +1,3 @@
 export default {
-    hello: 'Hola',
-  };
-  
+  Hello: 'Hola',
+};
