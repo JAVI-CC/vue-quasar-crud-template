@@ -1,17 +1,51 @@
 import { RouteRecordRaw } from 'vue-router';
+import authRouter from '../modules/auth/router/authRouter';
+import userRouter from 'src/modules/user/router/userRouter';
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    name: 'mainlayout',
+    component: () => import(/* webpackChunkName: "mainlayout */ '../modules/common/views/common-mainlayout.vue'),
+    children: [
+      //Auth
+      ...authRouter,
+
+      //Users
+      ...userRouter,
+    ],
+  },
+
+  {
+    path: '/acceder',
+    name: 'acceder',
+    component: () => import(/* webpackChunkName: "acceder" */ '../modules/auth/views/auth-login.vue'),
+  },
+
+  {
+    path: '/restablecer-password',
+    name: 'recovery-password',
+    component: () =>
+      import(/* webpackChunkName: "recovery-password" */ '../modules/auth/views/auth-recoveryPassword.vue'),
   },
 
   // Always leave this as last one,
   // but you can also remove it
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
+    //component: () => import('../modules/common/views/common-error404.vue'),
+    redirect() {
+      return { name: 'inicio', params: {} };
+    },
+  },
+
+  {
+    path: '/error/403',
+    name: 'forbidden',
+    //component: () => import('../modules/common/views/common-error403.vue'),
+    redirect() {
+      return { name: 'inicio', params: {} };
+    },
   },
 ];
 
