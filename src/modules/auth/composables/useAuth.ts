@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia';
 import { useAuthStore } from '../stores/authStore';
 import { Router, useRouter } from 'vue-router';
 import { LocalStorage } from 'quasar';
-import type { AuthChangePasswordForm, AuthVerificationUser, Login } from '../interfaces/authInterface';
+import type { AuthChangePasswordForm, AuthVerificationUser, LoginForm } from '../interfaces/authInterface';
 
 const useAuth = () => {
   const authStore = useAuthStore();
@@ -14,7 +14,7 @@ const useAuth = () => {
     authStore.check();
   };
 
-  const login = async (credentials: Login): Promise<void | string | string[]> => {
+  const login = async (credentials: LoginForm): Promise<void | string | string[]> => {
     const resp = await authStore.login(credentials);
     if (!isLogged.value) {
       return resp;
@@ -53,9 +53,10 @@ const useAuth = () => {
     });
   };
 
-  const redirectLogin = (): void => {
+  const redirectLogin = (emailRecoveryPassword?: string): void => {
     router.push({
       name: 'acceder',
+      params: { emailRecoveryPassword: encodeURIComponent(emailRecoveryPassword ?? '') }
     });
   };
 

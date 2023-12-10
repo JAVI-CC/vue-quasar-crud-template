@@ -2,7 +2,7 @@ import { ref, computed, readonly } from 'vue';
 import { api } from 'boot/axios';
 import { defineStore } from 'pinia';
 import { LocalStorage } from 'quasar';
-import type { Login, UserAuth, AuthChangePasswordForm, AuthVerificationUser } from '../interfaces/authInterface';
+import type { LoginForm, UserAuth, AuthChangePasswordForm, AuthVerificationUser } from '../interfaces/authInterface';
 import type { Message, MessageErrors } from 'src/modules/common/interfaces/commonInterface';
 import { AxiosError } from 'axios';
 import piniaResetAllStores from 'src/modules/common/helpers/piniaResetAllStores';
@@ -32,7 +32,7 @@ export const useAuthStore = defineStore('auth', () => {
     }
   };
 
-  const login = async (credentials: Login): Promise<void | string | string[]> => {
+  const login = async (credentials: LoginForm): Promise<void | string | string[]> => {
     try {
       const { data } = await api.post<UserAuth>(`${prefixPathAuth.value}/login`, credentials);
       setLogin(data);

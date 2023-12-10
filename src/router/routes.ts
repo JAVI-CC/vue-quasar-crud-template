@@ -17,9 +17,12 @@ const routes: RouteRecordRaw[] = [
   },
 
   {
-    path: '/acceder',
+    path: '/acceder/:emailRecoveryPassword?',
     name: 'acceder',
     component: () => import(/* webpackChunkName: "acceder" */ '../modules/auth/views/auth-login.vue'),
+    props: (route: { params: { emailRecoveryPassword?: string; } }) => ({
+      emailRecoveryPassword: route.params.emailRecoveryPassword ? String(decodeURIComponent(route.params.emailRecoveryPassword)) : '',
+    }),
   },
 
   {

@@ -13,7 +13,7 @@ export interface UserAuth {
   token?: string | null;
 }
 
-export interface Login {
+export interface LoginForm {
   email: string;
   password: string;
 }
