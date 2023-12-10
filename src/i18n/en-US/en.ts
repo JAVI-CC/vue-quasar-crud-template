@@ -21,4 +21,10 @@ export default {
   'It must be an email': 'It must be an email',
   'The password and confirm password must match': 'The password and confirm password must match',
   'In a few moments you will receive an email to reset your password. Check your mailbox': 'In a few moments you will receive an email to reset your password. Check your mailbox',
+  'Change password': 'Change password',
+  'Confirm password': 'Confirm password',
+  'Enter a new password': 'Enter a new password',
+  'Incorrect format': 'Incorrect format',
+  'Change you password to another that contains a minimum of 8 characters between uppercase letters, lowercase letters, numbers and symbols':
+    'Change you password to another that contains a minimum of 8 characters between uppercase letters, lowercase letters, numbers and symbols',
 };

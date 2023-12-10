@@ -21,4 +21,10 @@ export default {
   'It must be an email': 'Debe ser un correo electrónico',
   'The password and confirm password must match': 'La contraseña y la contraseña de confirmación deben coincidir',
   'In a few moments you will receive an email to reset your password. Check your mailbox': 'En unos momentos recibirás un correo electrónico para restablecer tu contraseña. Revisa tu correo',
+  'Change password': 'Cambiar contraseña',
+  'Confirm password': 'Confirmar contraseña',
+  'Enter a new password': 'Introduzca una nueva contraseña',
+  'Incorrect format': 'Formato incorrecto',
+  'Change you password to another that contains a minimum of 8 characters between uppercase letters, lowercase letters, numbers and symbols':
+    'Cambia tu contraseña por otra que contenga un mínimo de 8 caracteres entre letras mayúsculas, minúsculas, números y símbolos',
 };

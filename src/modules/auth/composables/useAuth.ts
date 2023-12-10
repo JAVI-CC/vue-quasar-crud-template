@@ -29,8 +29,8 @@ const useAuth = () => {
     await authStore.logout();
   };
 
-  const changePassword = async (payload: AuthChangePasswordForm): Promise<boolean | string | string[] | void> => {
-    return await authStore.changePassword(payload);
+  const changePassword = async (payload: AuthChangePasswordForm, token?: string): Promise<boolean | string | string[] | void> => {
+    return await authStore.changePassword(payload, token ?? '');
   };
 
   const recoveryPassword = async (email: string): Promise<boolean | string | string[] | void> => {

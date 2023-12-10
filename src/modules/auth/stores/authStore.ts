@@ -52,7 +52,9 @@ export const useAuthStore = defineStore('auth', () => {
     }
   };
 
-  const changePassword = async (payload: AuthChangePasswordForm): Promise<boolean | string | string[] | void> => {
+  const changePassword = async (payload: AuthChangePasswordForm, token?: string): Promise<boolean | string | string[] | void> => {
+    if (!!token) LocalStorage.set('token', token);
+
     try {
       await api.post<Message>(`${prefixPathAuth.value}/change/password`, payload);
       return true;
@@ -60,6 +62,7 @@ export const useAuthStore = defineStore('auth', () => {
       const err = error as AxiosError<MessageErrors | Message>;
       return err.response?.data?.message;
     } finally {
+      if (!!token) LocalStorage.remove('token');
     }
   };
 

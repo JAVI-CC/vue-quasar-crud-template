@@ -32,6 +32,16 @@ const routes: RouteRecordRaw[] = [
       import(/* webpackChunkName: "recovery-password" */ '../modules/auth/views/auth-recoveryPassword.vue'),
   },
 
+  {
+    path: '/auth/reset/password/:token',
+    name: 'reset-password',
+    component: () =>
+      import(/* webpackChunkName: "reset-password" */ '../modules/auth/views/auth-resetPassword.vue'),
+    props: (route: { params: { token: string; } }) => ({
+      token: String(decodeURIComponent(route.params.token.replace(/\+/g, ' '))),
+    }),
+  },
+
   // Always leave this as last one,
   // but you can also remove it
   {
