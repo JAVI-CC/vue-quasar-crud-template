@@ -15,9 +15,9 @@ const instanceNotifications = async (): Promise<void> => {
 
   //Pusher listen channels
   pusherConfig
-    .private(`users.${userAuth.value?.id}`).notification(
-      (notification: NotificationPusher) => {
-        if (notification.type === 'verified') console.log('Verificando user...');
+    .private(`App.Models.User.${userAuth.value?.id}`).notification(
+      async (notification: NotificationPusher) => {
+        if (notification.tipo === 'verified') await authStore.check();
       }
     );
 };

@@ -27,4 +27,12 @@ export default {
   'Incorrect format': 'Formato incorrecto',
   'Change you password to another that contains a minimum of 8 characters between uppercase letters, lowercase letters, numbers and symbols':
     'Cambia tu contraseña por otra que contenga un mínimo de 8 caracteres entre letras mayúsculas, minúsculas, números y símbolos',
+  'Confirm you email': 'Confirma tu correo electrónico',
+  'Click the link in your email inbox to confirm your account':
+    'Haga clic en el enlace de su bandeja de entrada de correo para confirmar su cuenta',
+  'Dont forget to check your spam folder in case anything is lost!':
+    '¡No olvides de revisar tu carpeta de correo no deseado en caso de que algo se haya perdido!',
+  'Resend confirmation email': 'Reenviar correo electrónico de confirmación',
+  'Checking...': 'Verificando...',
+  'In a few moments you will receive an email to confirm your email. Check your email.': 'En unos momentos recibirás un correo electrónico para confirmar tu correo electrónico. Revisa tu correo.'
 };

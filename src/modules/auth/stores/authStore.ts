@@ -92,6 +92,7 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       LocalStorage.set('token', token);
       await api.get<Message>(`${prefixPathUser.value}/verification/email/${id}/${hash}?expires=${expires}&signature=${signature}`);
+      await check();
       return true;
     } catch (error) {
       const err = error as AxiosError<MessageErrors | Message>;

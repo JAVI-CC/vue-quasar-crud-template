@@ -1,11 +1,11 @@
 import { boot } from 'quasar/wrappers';
-//import { useAuthStore } from 'src/modules/auth/stores/authStore';
+import { useAuthStore } from 'src/modules/auth/stores/authStore';
 import { Loading, LocalStorage } from 'quasar';
 
-export default boot(async ({}) => {
+export default boot(async ({ }) => {
   if (LocalStorage.has('token')) {
     //loggedStatus
-    //const authStore = useAuthStore();
+    const authStore = useAuthStore();
 
     Loading.show({
       spinnerSize: 150,
@@ -13,7 +13,7 @@ export default boot(async ({}) => {
       message: 'Cargando...',
     });
 
-    //await authStore.check();
+    await authStore.check();
 
     Loading.hide();
   }

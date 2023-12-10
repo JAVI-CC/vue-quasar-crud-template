@@ -7,6 +7,6 @@ export interface MessageErrors {
 }
 
 export interface NotificationPusher {
-  type: string;
+  tipo: string;
   value: boolean | string | number;
 }

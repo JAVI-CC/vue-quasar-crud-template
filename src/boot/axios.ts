@@ -31,7 +31,7 @@ api.interceptors.request.use((config) => {
 const isRedirectEndSession = (): boolean => {
   const lastPage = window.location.pathname + window.location.search;
 
-  if (lastPage !== '/acceder' && lastPage.startsWith('/auth/reset/password')) {
+  if (lastPage !== '/acceder' && !lastPage.startsWith('/auth/reset/password')) {
     LocalStorage.set('lastPage401', lastPage);
     return true;
   }

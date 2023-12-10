@@ -35,7 +35,8 @@ module.exports = configure(function (/* ctx */) {
       'axios',
       'addressbar-color',
       'loading-bar',
-      'quasar-lang-pack'
+      'quasar-lang-pack',
+      'auth-check'
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css

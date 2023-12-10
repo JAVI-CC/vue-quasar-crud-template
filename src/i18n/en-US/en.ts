@@ -27,4 +27,12 @@ export default {
   'Incorrect format': 'Incorrect format',
   'Change you password to another that contains a minimum of 8 characters between uppercase letters, lowercase letters, numbers and symbols':
     'Change you password to another that contains a minimum of 8 characters between uppercase letters, lowercase letters, numbers and symbols',
+  'Confirm you email': 'Confirm you email',
+  'Click the link in your email inbox to confirm your account':
+    'Click the link in your email inbox to confirm your account',
+  'Dont forget to check your spam folder in case anything is lost!':
+    'Dont forget to check your spam folder in case anything is lost!',
+  'Resend confirmation email': 'RResend confirmation email',
+  'Checking...': 'Checking...',
+  'In a few moments you will receive an email to confirm your email. Check your email.': 'In a few moments you will receive an email to confirm your email. Check your email.'
 };

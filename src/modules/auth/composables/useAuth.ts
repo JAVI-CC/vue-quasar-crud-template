@@ -94,9 +94,9 @@ const useAuth = () => {
     verifyUserAuth,
 
     //Variables
-    isLogged: computed(() => isLogged.value),
+    isLogged: computed<boolean>(() => isLogged.value ?? false),
     isAdmin: computed(() => isAdmin.value),
-    isEmailVerified: computed(() => userAuth.value?.is_email_verified),
+    isEmailVerified: computed<boolean>(() => userAuth.value?.is_email_verified ?? false),
     userAuth: computed(() => userAuth.value),
     nombreCompleto: computed(() => userAuth.value?.nombre_completo),
   };

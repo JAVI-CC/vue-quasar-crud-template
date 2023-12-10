@@ -42,6 +42,25 @@ const routes: RouteRecordRaw[] = [
     }),
   },
 
+  //Email verification
+  {
+    path: "/auth/verification/email/:id/:hash",
+    name: "email-verification",
+    component: () =>
+      import(
+          /* webpackChunkName: "email-verification" */ "src/modules/common/views/common-mainlayout.vue"
+      ),
+    props: (route) => ({
+      authVerification: {
+        id: String(route.params.id),
+        hash: String(route.params.hash),
+        expires: String(route.query.expires),
+        signature: String(route.query.signature),
+        token: String(decodeURIComponent(String(route.query.token).replace(/\+/g, ' '))),
+      },
+    }),
+  },
+
   // Always leave this as last one,
   // but you can also remove it
   {
