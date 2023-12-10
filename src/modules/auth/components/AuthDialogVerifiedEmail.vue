@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, ref } from 'vue';
 import useAuth from '../composables/useAuth';
 import AuthBannerVerifiedEmailSuccess from './AuthBannerVerifiedEmailSuccess.vue';
 import AuthBannerVerifiedEmailFailded from './AuthBannerVerifiedEmailFailed.vue';

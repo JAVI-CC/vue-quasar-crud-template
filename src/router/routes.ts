@@ -44,11 +44,11 @@ const routes: RouteRecordRaw[] = [
 
   //Email verification
   {
-    path: "/auth/verification/email/:id/:hash",
-    name: "email-verification",
+    path: '/auth/verification/email/:id/:hash',
+    name: 'email-verification',
     component: () =>
       import(
-          /* webpackChunkName: "email-verification" */ "src/modules/common/views/common-mainlayout.vue"
+          /* webpackChunkName: "email-verification" */ 'src/modules/common/views/common-mainlayout.vue'
       ),
     props: (route) => ({
       authVerification: {
