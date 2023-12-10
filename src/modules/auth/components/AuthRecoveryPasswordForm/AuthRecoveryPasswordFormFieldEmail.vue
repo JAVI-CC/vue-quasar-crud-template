@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { inject, toRef } from 'vue';
+import { inject } from 'vue';
 import { messageRequired, messageEmail, messageMaxLength } from 'src/modules/common/helpers/messageRules';
 import { RecoveryPasswordType } from '../../types/authType';
 
-const email = toRef(inject(RecoveryPasswordType) as string);
+const email = inject<string>(RecoveryPasswordType) as string;
 </script>
 
 <template>

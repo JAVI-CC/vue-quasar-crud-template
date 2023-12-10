@@ -1,5 +1,5 @@
-import type { InjectionKey } from 'vue';
+import type { InjectionKey, Ref } from 'vue';
 import type { LoginForm } from '../interfaces/authInterface';
 
 export const LoginFormType = Symbol() as InjectionKey<LoginForm>;
-export const RecoveryPasswordType = Symbol() as InjectionKey<string>;
+export const RecoveryPasswordType = Symbol() as InjectionKey<Ref<string>>;
