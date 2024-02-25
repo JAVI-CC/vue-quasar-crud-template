@@ -7,9 +7,6 @@ const routes: RouteRecordRaw[] = [
     name: 'user-list',
     beforeEnter: [isAuthenticatedGuard],
     component: () => import(/* webpackChunkName: "user-list" */ 'src/modules/user/views/user-list.vue'),
-    props: (route: { params: { tipo?: number } }) => ({
-      tipoNum: route.params.tipo ? Number(route.params.tipo) : 1,
-    }),
   },
   {
     path: '/users/nuevo',

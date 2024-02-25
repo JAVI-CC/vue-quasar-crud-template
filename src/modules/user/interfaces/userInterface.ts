@@ -8,6 +8,7 @@ export interface User {
   email: string;
   is_admin: boolean;
   is_email_verified: boolean;
+  avatar_url: string;
   rol: Rol;
 }
 
@@ -17,6 +18,7 @@ export interface UserForm {
   email: string | null;
   password: string | null;
   password_confirmation: string | null;
+  avatar_imagen_base64: string | null;
   rol: Rol | null;
   rol_id: number | null;
 }

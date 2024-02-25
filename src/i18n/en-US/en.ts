@@ -34,5 +34,10 @@ export default {
     'Dont forget to check your spam folder in case anything is lost!',
   'Resend confirmation email': 'RResend confirmation email',
   'Checking...': 'Checking...',
-  'In a few moments you will receive an email to confirm your email. Check your email.': 'In a few moments you will receive an email to confirm your email. Check your email.'
+  'In a few moments you will receive an email to confirm your email. Check your email.': 'In a few moments you will receive an email to confirm your email. Check your email.',
+  'User List': 'User List',
+  'Logout': 'Logout',
+  'My profile': 'My profile',
+  'Spanish': 'Spanish',
+  'English': 'English'
 };

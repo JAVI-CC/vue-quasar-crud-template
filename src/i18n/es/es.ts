@@ -34,5 +34,10 @@ export default {
     '¡No olvides de revisar tu carpeta de correo no deseado en caso de que algo se haya perdido!',
   'Resend confirmation email': 'Reenviar correo electrónico de confirmación',
   'Checking...': 'Verificando...',
-  'In a few moments you will receive an email to confirm your email. Check your email.': 'En unos momentos recibirás un correo electrónico para confirmar tu correo electrónico. Revisa tu correo.'
+  'In a few moments you will receive an email to confirm your email. Check your email.': 'En unos momentos recibirás un correo electrónico para confirmar tu correo electrónico. Revisa tu correo.',
+  'User List': 'Listado de usuarios',
+  'Logout': 'Cerrar sesión',
+  'My profile': 'Mi perfil',
+  'Spanish': 'Español',
+  'English': 'Ingles'
 };

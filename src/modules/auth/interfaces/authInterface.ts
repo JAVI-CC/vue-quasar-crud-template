@@ -9,6 +9,7 @@ export interface UserAuth {
   is_admin: boolean;
   is_email_verified: boolean;
   rol: Rol;
+  avatar_url: string;
   is_logged?: boolean | null;
   token?: string | null;
 }
