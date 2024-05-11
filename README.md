@@ -5,6 +5,7 @@
 A Quasar Crud Template
 
 ## Install the dependencies
+
 ```bash
 yarn
 # or
@@ -12,34 +13,35 @@ npm install
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
+
 ```bash
 quasar dev
 ```
 
-
 ### Lint the files
+
 ```bash
 yarn lint
 # or
 npm run lint
 ```
 
-
 ### Format the files
+
 ```bash
 yarn format
 # or
 npm run format
 ```
 
-
-
 ### Build the app for production
+
 ```bash
 quasar build
 ```
 
 ### Customize the configuration
+
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
 
 <br>
@@ -61,8 +63,7 @@ See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-
 <code>$ git clone https://github.com/JAVI-CC/vue-quasar-crud-template.git
 $ cd vue-quasar-crud-template
 $ cp .env.example .env.dev
-$ cp .env.example .env.prod
-$ sudo chown -R [USERNAME] .</code>
+$ cp .env.example .env.prod</code>
 </pre>
 
 <h4>Running mode dev:</h4>
